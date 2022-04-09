@@ -1,0 +1,26 @@
+{
+    "name": "Roxy",
+    "description": "Self-Hosted and Easy-to-Use Proxy to bypass any website",
+    "repository": "https://github.com/CoolFool/Roxy",
+    "success_url": "/",
+    "env":{
+      "DOMAIN":{
+        "description" : "The domain to proxy through heroku (only HOSTNAME e.g. example.com)",
+        "required":true
+      },
+      "KEEP_DYNO_ALIVE":{
+        "description" : "Should Roxy keep heroku free dyno alive (change value to 'true' if required)",
+        "value":"false",
+        "required":false
+      },
+      "HEROKU_APP_URL":{
+        "description" : "Full Heroku App URL (required if KEEP_DYNO_ALIVE is true)",
+        "required":false
+      }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/CoolFool/heroku-buildpack-nginx.git"
+        }
+      ]
+  }
