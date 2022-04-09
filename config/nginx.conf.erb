@@ -1,0 +1,38 @@
+daemon off;
+worker_processes <%= ENV['NGINX_WORKERS'] || 4 %>;
+events {
+  use epoll;
+  accept_mutex on;
+  worker_connections <%= ENV['NGINX_WORKER_CONNECTIONS'] || 1024 %>;
+}
+ 
+http {
+    include mime.types;
+    default_type application/octet-stream;
+    proxy_ssl_server_name on;
+    sendfile on;
+    gzip on;
+ 
+ 
+    # Must read the body in 5 seconds.
+    client_body_timeout <%= ENV['NGINX_CLIENT_BODY_TIMEOUT'] || 5 %>;
+ 
+    server {
+        listen <%= ENV["PORT"] %>;
+ 
+        #Redirects
+        proxy_redirect https://1337x.to http://$host/1337x;
+        proxy_redirect http://1337x.to http://$host/1337x;
+ 
+        port_in_redirect off;
+ 
+        #Root URI
+        location / {
+            proxy_pass https://1337x.to;
+            proxy_set_header Host 1337x.to;
+            proxy_set_header Referer 'https://1337x.to';
+            proxy_set_header Accept-Encoding "";
+            proxy_set_header CF-Connecting-IP "";
+        }
+    }
+}
