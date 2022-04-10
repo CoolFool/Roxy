@@ -14,7 +14,7 @@ def keep_alive():
 if __name__ == '__main__':
     keep_alive()
     scheduler = BlockingScheduler()
-    scheduler.add_job(keep_alive, 'interval', seconds=600)
+    scheduler.add_job(keep_alive, 'interval', seconds=300)
     try:
         print("Starting Keep Alive Service...")
         scheduler.start()
