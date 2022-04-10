@@ -1,6 +1,6 @@
 {
     "name": "Roxy",
-    "description": "Self-Hosted and Easy-to-Use Proxy to bypass any website",
+    "description": "Deploy Your Self-Hosted Proxy to unblock websites through Heroku in one click",
     "repository": "https://github.com/CoolFool/Roxy",
     "success_url": "/",
     "env":{
