@@ -16,6 +16,7 @@ if __name__ == '__main__':
     scheduler = BlockingScheduler()
     scheduler.add_job(keep_alive, 'interval', seconds=600)
     try:
+        print("Starting Keep Alive Service...")
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):
         pass
