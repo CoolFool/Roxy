@@ -21,6 +21,8 @@
     "buildpacks": [
         {
             "url": "https://github.com/CoolFool/heroku-buildpack-nginx.git"
+        },{
+            "url": "heroku/python"
         }
       ]
   }

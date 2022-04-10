@@ -45,14 +45,17 @@ To deploy and use Roxy the following Environment Variables are required:
 3) Install Heroku CLI and Git for your platform
 4) Use the `heroku login` command to log in to the Heroku CLI:
 5) Create an app on Heroku using `heroku create` and note the URL Generated
-6) Set `DOMAIN` environment variable using `heroku config:set DOMAIN=example.org`
-7) Heroku Free Dyno sleeps after 20 minutes.<br> 
+6) Add the required buildpacks as follows:
+  - `heroku buildpacks:set heroku/python`
+  - `heroku buildpacks:set https://github.com/CoolFool/heroku-buildpack-nginx.git`
+7) Set `DOMAIN` environment variable using `heroku config:set DOMAIN=example.org`
+8) Heroku Free Dyno sleeps after 20 minutes.<br> 
 If you want to keep the Dyno alive set the following environment values using <br>
     - `heroku config:set KEEP_DYNO_ALIVE=true`
     - `heroku config:set HEROKU_APP_URL=https://example-app-123.herokuapp.com` (Set the generated URL as its value)
-7) Now deploy Roxy using `git push heroku main`
-8) Visit Roxy at the URL generated while creating the app or run `heroku open`
-9) View Logs for the app using `heroku logs --tail`
+9) Now deploy Roxy using `git push heroku main`
+10) Visit Roxy at the URL generated while creating the app or run `heroku open`
+11) View Logs for the app using `heroku logs --tail`
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
