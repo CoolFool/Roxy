@@ -10,5 +10,3 @@ else
 fi
 
 bin/start-nginx-solo
-P1=$!
-wait $P1
