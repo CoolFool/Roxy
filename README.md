@@ -1,6 +1,6 @@
 <div align="center" id = "top">
   <img src="logo.png"  alt="roxy logo"/>
-  <h3>Deploy Your Self-Hosted Proxy to unblock websites through Heroku in one click </h3> 
+  <h3>Deploy Self-Hosted Proxy to unblock websites through Heroku in one click</h3> 
 </div>
 
 ## Contents
