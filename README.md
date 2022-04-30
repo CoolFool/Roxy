@@ -4,13 +4,13 @@
 </div>
 
 ## Contents
-- [Introduction](#Introduction)
-- [Environment Variables](#Environment-Variables)
-- [One-Click Deploy](#One-Click-Deploy)
-- [Deploy using Local Machine](#Deploy-using-Local-Machine)
-- [Contributing](#Contributing)
-- [Authors](#Authors)
-- [License](#License)
+- [Introduction](#introduction)
+- [Environment Variables](#environment-variables)
+- [One-Click Deploy](#one-click-deploy)
+- [Deploy using Local Machine](#deploy-using-local-machine)
+- [Contributing](#contributing)
+- [Authors](#authors)
+- [License](#license)
 
 ## Introduction
 - Roxy is a simple self-hosted proxy on Heroku to unblock websites
